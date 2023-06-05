@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Blogr]</title>
+
+
+  <link rel="stylesheet" href="css/css.css">
+  
+</head>
+<body>
+  <nav id="nav">
+    <div class="logo"><img  src="/images/logo.svg" ></div> 
+    
+    <div class="hamburger-menu">
+      
+      <img class="hamburger" src="/images/icon-hamburger.svg" onclick="displayMenu()"</img>
+      <img class="hamburger_close" src="/images/icon-close.svg" 
+      onclick="closeMenu()"</img> </div>
+    
+    
+    <div class="mobile-menu">
+      <h3>Product <img class="dropdownmenu" src="images/icon-arrow-dark.svg" onclick="dropDownMenu()"></h3>
+        <div class="mobile-menu-list1">
+    
+   <a href="#"> Overview</a>
+   <a href="#"> Overview</a>
+   <a href="#"> Overview</a>
+   <a href="#"> Overview</a>
+    
+    
+        </div>
+
+    <h3>Company <img src="images/icon-arrow-dark.svg" onclick="dropDownMenu2()"></h3>
+    <div class="mobile-menu-list2">
+    
+      <a href="#"> Overview</a>
+      <a href="#"> Overview</a>
+      <a href="#"> Overview</a>
+      <a href="#"> Overview</a>
+       
+       
+           </div>
+
+    <h3>Connect <img src="images/icon-arrow-dark.svg" onclick="dropDownMenu3()"></h3>
+    <div class="mobile-menu-list3">
+    
+      <a href="#"> Overview3</a>
+      <a href="#"> Overview</a>
+      <a href="#"> Overview</a>
+      <a href="#"> Overview</a>
+       
+       
+           </div>
+<hr>
+    <a href="#">Login</a>
+    <button>Sign Up</button>
+    </div>
+  
+  </nav>
+  <header>
+  <div class="background"></div>
+
+
+
+  <h3>A modern publishing platform</h3>
+  <p>Grow your audience and build your online brand</p>
+
+  <div class="buttons">
+  <button class="start_cta">Start for Free</button>
+  <button class="learn_cta">Learn more</button>
+
+</div></header>
+<main>
+  <h4>Designed for the future</h4>
+
+  <div class="feature-1">
+  <div class="image-1">
+  <img class="image-1-mobile" src="/images/illustration-editor-mobile.svg">
+  <img class="image-1-desktop" src="/images/illustration-editor-desktop.svg">
+</div>
+
+  <div class="caption-1">
+  <h4>Introducing an extensible editor</h4>
+  <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+  change the looks of a blog.</p>
+
+  <h4>Robust content management</h4>
+  <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p></div>
+</div>
+
+<div class="feature-2"></div>
+
+<div class="image-2"><img class="image-2-mobile" src="/images/illustration-phones.svg"></div>
+<div class="caption-2">
+  <h4>State of the Art Infrastructure</h4>
+  <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p></div>
+</div>
+
+<div class="feature-3">
+  <div class="image-3"><img class="image-3-mobile" src="/images/illustration-laptop-mobile.svg"><img class="image-3-desktop" src="/images/illustration-laptop-desktop.svg"></div>
+
+  <div class="caption-3">
+  <h4>Free, open, simple</h4>
+  <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+
+  <h4>Powerful tooling</h4>
+  <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+  capable of producing even the most complicated sites.</p>
+</div>
+</div>
+</main>
+
+<footer>
+
+  <div class="footer-container">
+  <div class="footer-logo"><img src="images/logo.svg"></div>
+
+
+  <div class="section-1-footer">
+    <div class="list-1-footer">
+    <h4>Product</h4>
+<p>Overview</p>
+<p>Pricing</p>
+<p>marketplace</p>
+<p>features</p>
+<p>Integrations</p>
+
+</div>
+
+<div class="section-2-footer">
+  <div class="list-2-footer">
+  <h4>Company</h4>
+<p>About</p>
+<p>Team</p>
+<p>Blog</p>
+<p>Careers</p>
+
+</div>
+  </div>
+
+  <div class="section-3-footer">
+    <div class="list-3-footer">
+    <h4>Connect</h4>
+<p>Contact</p>
+<p>Newsletter</p>
+<p>Linkedin</p>
+
+</div>
+ 
+</div>
+</footer>
+  
+
+
+  <script>
+ const logo = document.querySelector('#nav')
+
+const getOffset = () => {
+  if(window.pageYOffset > 50){
+     logo.style.backgroundColor = 'hsl(353, 100%, 66%)'
+     logo.style.transition = 'background .5s ease-out'
+     logo.style.boxShadow = '0px 1px 4px black'
+     logo.style.borderRadius = '0 0  20px 20px'
+  }
+  if(window.pageYOffset < 50){
+     logo.style.backgroundColor = 'transparent'
+     logo.style.transition = 'background .10s ease-out'
+     logo.style.boxShadow = 'none' 
+  }
+}
+
+window.addEventListener('scroll', getOffset)
+</script>
+
+<script src="hamburger/hamburger.js">
+
+
+</script>
+
+</body>
+</html>
